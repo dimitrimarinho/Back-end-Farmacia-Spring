@@ -1,6 +1,7 @@
 package com.farmacia.backendspringfarmacia.controller;
 
 import java.util.List;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,12 +49,12 @@ public class ProdutoController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Produto> adicionaProduto(@RequestBody Produto produto){
+	public ResponseEntity<Produto> adicionaProduto(@Valid @RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Produto> alteraProduto(@RequestBody Produto produto){
+	public ResponseEntity<Produto> alteraProduto(@Valid @RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(produto));
 	}
 	
