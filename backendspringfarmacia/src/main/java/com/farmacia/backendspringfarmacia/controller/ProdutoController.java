@@ -20,7 +20,7 @@ import com.farmacia.backendspringfarmacia.repository.ProdutoRepository;
 @RestController
 
 //Cria um Endpoint
-@RequestMapping("/categorias")
+@RequestMapping("/produtos")
 
 //Permite que requisições de outras portas sejam aceitas na minha aplicação
 @CrossOrigin("*")
